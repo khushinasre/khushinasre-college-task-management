@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const user = JSON.parse(localStorage.getItem("loggedInUser"));
 
   if (!user || !["accounts", "scholarship"].includes(user.role)) {
-    window.location.href = "../login.html";
+    window.location.href = "../index.html";
     return;
   }
 
@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
   ************************************************/
   logoutBtn.addEventListener("click", () => {
     localStorage.removeItem("loggedInUser");
-    window.location.href = "../login/index.html";
+    window.location.href = "../index.html";
   });
 
   /************************************************
@@ -107,3 +107,4 @@ document.addEventListener("DOMContentLoaded", () => {
   loadTasks();
 
 });
+
