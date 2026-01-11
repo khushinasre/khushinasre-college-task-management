@@ -6,7 +6,7 @@ import { users } from "../Data/Database.js";
 const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
 
 if (!loggedInUser || loggedInUser.role !== "hod") {
-  window.location.href = "../login.html";
+  window.location.href = "../index.html";
 }
 
 /************************************************
@@ -202,10 +202,11 @@ function toggleAssignSection(show) {
 ************************************************/
 document.getElementById("logoutBtn").addEventListener("click", () => {
   localStorage.removeItem("loggedInUser");
-  window.location.href = "../login/index.html";
+  window.location.href = "../index.html";
 });
 
 /************************************************
  🚀 INIT
 ************************************************/
 loadHodTasks();
+
