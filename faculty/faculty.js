@@ -4,7 +4,7 @@
 const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
 
 if (!loggedInUser || loggedInUser.role !== "faculty") {
-  window.location.href = "../login.html";
+  window.location.href = "../index.html";
 }
 
 /************************************************
@@ -112,10 +112,11 @@ function attachStatusListeners() {
 ************************************************/
 document.getElementById("logoutBtn").addEventListener("click", () => {
   localStorage.removeItem("loggedInUser");
-  window.location.href = "../login/index.html";
+  window.location.href = "../index.html";
 });
 
 /************************************************
  🚀 INIT
 ************************************************/
 loadFacultyTasks();
+
