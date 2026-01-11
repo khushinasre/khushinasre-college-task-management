@@ -6,7 +6,7 @@ import { users } from "../Data/Database.js";
 const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
 
 if (!loggedInUser || loggedInUser.role !== "principal") {
-  window.location.href = "../login.html";
+  window.location.href = "../index.html";
 }
 
 // Show principal name
@@ -254,11 +254,12 @@ card.innerHTML = `
 ************************************************/
 document.getElementById("logoutBtn").addEventListener("click", () => {
   localStorage.removeItem("loggedInUser");
-  window.location.href = "../login/index.html";
+  window.location.href = "../index.html";
 });
 
 /************************************************
  🚀 INITIAL LOAD
 ************************************************/
 renderTasks(getTasks());
+
 loadHodPerformance();
